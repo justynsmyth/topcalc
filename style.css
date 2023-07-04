@@ -1,0 +1,104 @@
+/* Use root to set global variables then use them with var() */
+:root {
+  --borderColor: black;
+  --bgColor: grey;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 50px;
+  min-height: 500px;
+}
+
+button {
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+button:focus,
+button:active {
+  outline: none;
+}
+
+.calc {
+  width: 400px;
+  max-width: 400px;
+  /* visable height (how much vertical space used */
+  min-height: 50vh;
+  border-radius: 10px;
+  padding: 20px;
+  border: 2px var(--borderColor) solid;
+  background-color: var(--bgColor);
+}
+
+#topBox {
+  border: 2px var(--borderColor) solid;
+  border-radius: 5px;
+  text-align: right;
+  background-color: whitesmoke;
+}
+
+.storageDisplay {
+  padding-top: 20px;
+  height: 5vh;
+  padding-right: 10px;
+  font-size: 20px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.display {
+  border-radius: 4px;
+  text-align: right;
+  font-size: 35px;
+  min-height: 55px;
+  padding: 10px 10px 0px 10px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.top-buttons {
+  display: flex;
+}
+
+.btn {
+  flex-grow: 1;
+}
+
+.button-grid {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.grid {
+  flex-basis: 75px;
+  padding: 10px 20px;
+  margin-top: 5px;
+  margin-bottom: 1px;
+  user-select: none;
+}
+
+/* .storageDisplay,
+.display {
+  border: red solid thin;
+} */
